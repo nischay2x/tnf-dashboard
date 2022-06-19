@@ -1,0 +1,150 @@
+:root {
+  --sec: #f5f6ff;
+  --main: #32297c;
+  --hover: #ffc37c;
+}
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+main {
+  min-height: 100vh;
+}
+
+.sidebar .nav-header {
+  height: 5rem;
+  color: #fff;
+}
+.nav-header span {
+  font-size: 2rem;
+  font-weight: 500;
+}
+.sidebar .navs-hold {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2px;
+  padding-left: 2rem;
+}
+.sidebar .nav {
+  color: #fff;
+  text-transform: capitalize;
+  width: 100%;
+  padding-left: 1rem;
+  transition: 0.2s ease;
+  cursor: pointer;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 1.1rem;
+  column-gap: 0.8rem;
+}
+.sidebar .nav:hover,
+.sidebar .nav.active {
+  background-color: var(--sec);
+  color: #000;
+}
+.sidebar .nav-footer {
+  margin-top: auto;
+  display: grid;
+  padding-bottom: 2rem;
+  place-items: center;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+.sidebar .nav-footer .d-flex {
+  align-items: center;
+  column-gap: 0.8rem;
+}
+.sidebar .nav-footer .profile {
+  width: 3rem;
+  height: 3rem;
+  background-color: var(--sec);
+  background-size: cover;
+  background-image: url("https://randomuser.me/api/portraits/men/60.jpg");
+  background-position: center;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.home-btns {
+  filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.1));
+  color: var(--main);
+  border-radius: 3px;
+  background-color: #fff;
+  width: 12rem;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.home-btns:hover {
+  background-color: var(--hover);
+}
+
+.profile-img {
+  background-color: var(--secondary);
+  background-image: url("https://randomuser.me/api/portraits/men/60.jpg");
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  overflow: hidden;
+  background-position: center;
+  background-size: cover;
+}
+.profile-info {
+  max-width: 400px;
+}
+.profile-info span {
+  display: block;
+}
+.profile-info .name {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+.profile-info .bio {
+  font-size: 0.9rem;
+}
+
+.social-inputs:nth-child(3n + 1) {
+  padding-left: 0 !important;
+}
+.social-inputs:nth-child(3n) {
+  padding-right: 0 !important;
+}
+.edit-profile-btn {
+  border: 1px solid var(--main);
+  color: var(--main);
+  background-color: #fff;
+}
+.edit-profile-btn:hover {
+  background-color: var(--main);
+  color: #fff;
+}
+
+.rg-1 {
+  row-gap: 1rem;
+}
+.cg-1 {
+  column-gap: 1rem;
+}
+.cg-2 {
+  column-gap: 2rem;
+}
+.fw-500 {
+  font-weight: 500;
+}
+.fw-600 {
+  font-weight: 600;
+}
+.bg-main {
+  background-color: var(--main);
+}
+.bg-sec {
+  background-color: var(--sec);
+}
