@@ -1,11 +1,13 @@
 import "./styles.css";
 import Home from "./components/home.jsx";
 import Profile from "./components/profile.jsx";
+import About from "./components/about";
 import { useState } from "react";
 
 const componentMap = {
   home: Home,
-  profile: Profile
+  profile: Profile,
+  about: About
 };
 
 const navList = [
@@ -20,14 +22,13 @@ const navList = [
 ];
 
 export default function App() {
-  const [currentTab, setCurrentTab] = useState(<componentMap.home />);
+  const [currentTab, setCurrentTab] = useState(Home);
   const [currentTabName, setCurrentTabName] = useState("home");
 
   const onNavClick = (i) => {
     let name = navList[i].name;
-    let component = componentMap[name] ? componentMap[name] : <></>;
     setCurrentTabName(name);
-    setCurrentTab(<component.name />);
+    setCurrentTab(componentMap[name]);
   };
 
   return (

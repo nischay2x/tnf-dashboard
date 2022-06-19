@@ -1,4 +1,6 @@
-export default function Profile() {
+import TextField from "@mui/material/TextField";
+
+const Profile = () => {
   return (
     <div className="container py-4 d-flex flex-column h-100 justify-content-around">
       <div>
@@ -17,20 +19,40 @@ export default function Profile() {
       <div>
         <h5 className="fw-600">Social details</h5>
         <div className="col-12 py-2 mb-3 px-0">
-          <input className="form-control" />
+          <TextField
+            label="Full Name"
+            variant="outlined"
+            className="w-100 bg-white"
+          />
         </div>
         <div className="d-flex flex-wrap rg-1 px-0">
-          <div className="col-12 py-2 col-md-6 col-lg-4 social-inputs">
-            <input className="form-control" />
+          <div className="col-12 py-2 col-md-6 col-lg-4 small-inputs">
+            <TextField
+              label="Instagram"
+              variant="outlined"
+              className="w-100 bg-white"
+            />
           </div>
-          <div className="col-12 py-2 col-md-6 col-lg-4 social-inputs">
-            <input className="form-control" />
+          <div className="col-12 py-2 col-md-6 col-lg-4 small-inputs">
+            <TextField
+              variant="outlined"
+              label="Twitter"
+              className="w-100 bg-white"
+            />
           </div>
-          <div className="col-12 py-2 col-md-6 col-lg-4 social-inputs">
-            <input className="form-control" />
+          <div className="col-12 py-2 col-md-6 col-lg-4 small-inputs">
+            <TextField
+              variant="outlined"
+              label="Facebook"
+              className="w-100 bg-white"
+            />
           </div>
-          <div className="col-12 py-2 col-md-6 col-lg-4 social-inputs">
-            <input className="form-control" />
+          <div className="col-12 py-2 col-md-6 col-lg-4 small-inputs">
+            <TextField
+              variant="outlined"
+              label="LinkedIn"
+              className="w-100 bg-white"
+            />
           </div>
         </div>
       </div>
@@ -39,4 +61,5 @@ export default function Profile() {
       </div>
     </div>
   );
-}
+};
+export default Profile;

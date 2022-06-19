@@ -9,6 +9,8 @@
 
 main {
   min-height: 100vh;
+  max-height: 100vh;
+  overflow-y: scroll;
 }
 
 .sidebar .nav-header {
@@ -111,10 +113,10 @@ main {
   font-size: 0.9rem;
 }
 
-.social-inputs:nth-child(3n + 1) {
+.small-inputs:nth-child(3n + 1) {
   padding-left: 0 !important;
 }
-.social-inputs:nth-child(3n) {
+.small-inputs:nth-child(3n) {
   padding-right: 0 !important;
 }
 .edit-profile-btn {
@@ -147,4 +149,8 @@ main {
 }
 .bg-sec {
   background-color: var(--sec);
+}
+
+.MuiFormHelperText-root {
+  display: none;
 }

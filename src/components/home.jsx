@@ -1,4 +1,4 @@
-export default function Home() {
+const Home = () => {
   return (
     <div className="d-flex w-100 h-100">
       <div className="m-auto">
@@ -38,4 +38,5 @@ export default function Home() {
       </div>
     </div>
   );
-}
+};
+export default Home;
