@@ -3,11 +3,13 @@ import Home from "./components/home.jsx";
 import Profile from "./components/profile.jsx";
 import About from "./components/about";
 import { useState } from "react";
+import Resume from "./components/resume";
 
 const componentMap = {
   home: Home,
   profile: Profile,
-  about: About
+  about: About,
+  resume: Resume
 };
 
 const navList = [
