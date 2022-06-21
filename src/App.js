@@ -4,13 +4,7 @@ import Profile from "./components/profile.jsx";
 import About from "./components/about";
 import { useState } from "react";
 import Resume from "./components/resume";
-
-const componentMap = {
-  home: Home,
-  profile: Profile,
-  about: About,
-  resume: Resume
-};
+import Services from "./components/services";
 
 const navList = [
   { name: "home", icon: "fa fa-facebook" },
@@ -24,18 +18,15 @@ const navList = [
 ];
 
 export default function App() {
-  const [currentTab, setCurrentTab] = useState(Home);
   const [currentTabName, setCurrentTabName] = useState("home");
 
   const onNavClick = (i) => {
-    let name = navList[i].name;
-    setCurrentTabName(name);
-    setCurrentTab(componentMap[name]);
+    setCurrentTabName(navList[i].name);
   };
 
   return (
     <main className="d-flex">
-      <div className="col-0 col-md-2 col-lg-3 col-xl-2 bg-main d-flex flex-column sidebar p-0">
+      <div className="col-0 col-md-3 col-lg-3 col-xl-2 bg-main d-flex flex-column sidebar p-0">
         <div className="d-flex nav-header">
           <span className="m-auto">Menu</span>
         </div>
@@ -59,7 +50,20 @@ export default function App() {
           </div>
         </div>
       </div>
-      <div className="col bg-sec">{currentTab}</div>
+      <div className="col bg-sec">
+          <Wrap componentName={currentTabName} />
+      </div>
     </main>
   );
+}
+
+function Wrap ({ componentName }) {
+  switch(componentName){
+    case 'home': return <Home/>;
+    case 'about': return <About/>;
+    case 'profile': return <Profile/>;
+    case 'resume': return <Resume/>;
+    case 'services': return <Services/>;
+    default: return <></>
+  }
 }

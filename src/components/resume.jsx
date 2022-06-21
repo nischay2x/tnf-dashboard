@@ -1,10 +1,20 @@
-import TextField from "@mui/material/TextField";
-import { FormControl, MenuItem, Select, InputLabel } from "@mui/material";
-import { DatePicker } from "@mui/x-date-pickers/DatePicker";
-import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
-import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+import { useState } from "react";
+import { TextField } from "./inputFields.jsx";
+
 
 const Resume = () => {
+
+  const [data, setData] = useState({
+    peTitle: "", peInsti: "", peDesc: "", peYear: "",
+    seTitle: "", seInsti: "", seDesc: "", seYear: "",
+    pjTitle: "", pjPlace: "", pjDesc: "", pjYear: "",
+    sjTitle: "", sjPlace: "", sjDesc: "", sjYear: ""
+  });
+
+  const onDataChange = (e) => {
+    setData(prev => ({...prev, [e.target.name]: e.target.value}))
+  }
+
   return (
     <div
       className="container h-100 py-4 d-flex flex-column"
@@ -16,133 +26,101 @@ const Resume = () => {
       <div>
         <h5 className="fw-600">Primary Education</h5>
         <div className="d-flex flex-wrap rg-1 px-0">
-          <div className="col-12 py-2 col-md-6 col-lg-4 small-inputs">
+          <div className="col-12 py-2 col-md-6 col-lg-4">
             <TextField
-              label="Title"
-              variant="outlined"
-              className="w-100 bg-white"
+              label="Title" type="text" name="peTitle" value={data.peTitle} onChange={onDataChange}
             />
           </div>
-          <div className="col-12 py-2 col-md-6 col-lg-4 small-inputs">
+          <div className="col-12 py-2 col-md-6 col-lg-4">
             <TextField
-              label="Instituion"
-              variant="outlined"
-              className="w-100 bg-white"
+              label="Instituion" type="text" name="peInsti" value={data.peInsti} onChange={onDataChange}
             />
           </div>
-          <div className="col-12 py-2 col-md-6 col-lg-4 small-inputs">
+          <div className="col-12 py-2 col-md-6 col-lg-4">
             <TextField
-              label="Year"
-              variant="outlined"
-              className="w-100 bg-white"
+              label="Year" type="text" name="peYear" value={data.peYear} onChange={onDataChange}
             />
           </div>
-          <div className="col-12 py-2 mb-3 px-0">
+          <div className="col-12 py-2 mb-3">
             <TextField
-              label="Description"
-              variant="outlined"
-              className="w-100 bg-white"
+              label="Description" type="text" name="peDesc" value={data.peDesc} onChange={onDataChange}
             />
           </div>
         </div>
         <br />
         <h5 className="fw-600">Secondary Education</h5>
         <div className="d-flex flex-wrap rg-1 px-0">
-          <div className="col-12 py-2 col-md-6 col-lg-4 small-inputs">
+          <div className="col-12 py-2 col-md-6 col-lg-4">
             <TextField
-              label="Title"
-              variant="outlined"
-              className="w-100 bg-white"
+              label="Title" type="text" name="seTitle" value={data.seTitle} onChange={onDataChange}
             />
           </div>
-          <div className="col-12 py-2 col-md-6 col-lg-4 small-inputs">
+          <div className="col-12 py-2 col-md-6 col-lg-4">
             <TextField
-              label="Instituion"
-              variant="outlined"
-              className="w-100 bg-white"
+              label="Instituion" type="text" name="seInsti" value={data.seInsti} onChange={onDataChange}
             />
           </div>
-          <div className="col-12 py-2 col-md-6 col-lg-4 small-inputs">
+          <div className="col-12 py-2 col-md-6 col-lg-4">
             <TextField
-              label="Year"
-              variant="outlined"
-              className="w-100 bg-white"
+              label="Year" type="text" name="seYear" value={data.seYear} onChange={onDataChange}
             />
           </div>
-          <div className="col-12 py-2 mb-3 px-0">
+          <div className="col-12 py-2 mb-3">
             <TextField
-              label="Description"
-              variant="outlined"
-              className="w-100 bg-white"
+              label="Description" type="text" name="seDesc" value={data.seDesc} onChange={onDataChange}
             />
           </div>
         </div>
         <br />
         <h5 className="fw-600">Primary Job</h5>
         <div className="d-flex flex-wrap rg-1 px-0">
-          <div className="col-12 py-2 col-md-6 col-lg-4 small-inputs">
+          <div className="col-12 py-2 col-md-6 col-lg-4">
             <TextField
-              label="Title"
-              variant="outlined"
-              className="w-100 bg-white"
+              label="Title" type="text" name="pjTitle" value={data.pjTitle} onChange={onDataChange}
             />
           </div>
-          <div className="col-12 py-2 col-md-6 col-lg-4 small-inputs">
+          <div className="col-12 py-2 col-md-6 col-lg-4">
             <TextField
-              label="Workspace"
-              variant="outlined"
-              className="w-100 bg-white"
+              label="Workspace" type="text" name="pjPlace" value={data.pjPlace} onChange={onDataChange}
             />
           </div>
-          <div className="col-12 py-2 col-md-6 col-lg-4 small-inputs">
+          <div className="col-12 py-2 col-md-6 col-lg-4">
             <TextField
-              label="Year"
-              variant="outlined"
-              className="w-100 bg-white"
+              label="Year" type="text" name="pjYear" value={data.pjYear} onChange={onDataChange}
             />
           </div>
-          <div className="col-12 py-2 mb-3 px-0">
+          <div className="col-12 py-2 mb-3">
             <TextField
-              label="Description"
-              variant="outlined"
-              className="w-100 bg-white"
+              label="Description" type="text" name="pjDesc" value={data.pjDesc} onChange={onDataChange}
             />
           </div>
         </div>
         <br />
         <h5 className="fw-600">Secondary Job</h5>
         <div className="d-flex flex-wrap rg-1 px-0">
-          <div className="col-12 py-2 col-md-6 col-lg-4 small-inputs">
+          <div className="col-12 py-2 col-md-6 col-lg-4">
             <TextField
-              label="Title"
-              variant="outlined"
-              className="w-100 bg-white"
+              label="Title" type="text" name="sjTitle" value={data.sjTitle} onChange={onDataChange}
             />
           </div>
-          <div className="col-12 py-2 col-md-6 col-lg-4 small-inputs">
+          <div className="col-12 py-2 col-md-6 col-lg-4">
             <TextField
-              label="Workspace"
-              variant="outlined"
-              className="w-100 bg-white"
+              label="Workspace" type="text" name="sjPlace" value={data.sjPlace} onChange={onDataChange}
             />
           </div>
-          <div className="col-12 py-2 col-md-6 col-lg-4 small-inputs">
+          <div className="col-12 py-2 col-md-6 col-lg-4">
             <TextField
-              label="Year"
-              variant="outlined"
-              className="w-100 bg-white"
+              label="Year" type="text" name="sjYear" value={data.sjYear} onChange={onDataChange}
             />
           </div>
-          <div className="col-12 py-2 mb-3 px-0">
+          <div className="col-12 py-2 mb-3">
             <TextField
-              label="Description"
-              variant="outlined"
-              className="w-100 bg-white"
+              label="Description" type="text" name="sjDesc" value={data.sjDesc} onChange={onDataChange}
             />
           </div>
         </div>
       </div>
-      <div className="d-flex">
+      <div className="d-flex pb-4">
         <button className="btn m-auto px-4 edit-profile-btn">Edit</button>
       </div>
     </div>

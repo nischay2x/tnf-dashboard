@@ -133,6 +133,9 @@ main .col.bg-sec {
   color: #fff;
 }
 
+.w-95{
+  width: 95%;
+}
 .rg-1 {
   row-gap: 1rem;
 }
@@ -156,5 +159,10 @@ main .col.bg-sec {
 }
 
 .MuiFormHelperText-root {
+  display: none;
+}
+
+
+iframe {
   display: none;
 }

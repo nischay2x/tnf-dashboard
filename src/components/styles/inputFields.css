@@ -1,0 +1,54 @@
+.ci-wrap {
+    position: relative;
+}
+
+.ci-wrap input,
+.ci-wrap select {
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+    outline: none;
+    transition: all 0.2s ease;
+    background-color: #ffffff;
+}
+
+.ci-wrap select > option {
+    padding: 0.5rem;
+    border: none;
+}
+
+.ci-wrap label {
+    margin-left: 0.5rem;
+    position: absolute;
+    transition: all 0.2s ease;
+    pointer-events: none;
+    top: -0.7rem;
+    left: 0rem;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    transform: translateY(1.2rem);
+    color: var(--main);
+    font-weight: 500;
+}
+
+.ci-wrap input:focus,
+.ci-wrap select:focus{
+    box-shadow: 1px 1px 0px var(--main);
+}
+.ci-wrap input:focus + label, 
+.ci-wrap input.active + label,
+.ci-wrap select:focus + label,
+.ci-wrap select.active + label {
+    transform: translateY(0);
+    font-size: small;
+    color: darkgreen;
+}
+
+.ci-wrap input[type=date]::-webkit-datetime-edit {
+    color: transparent;
+}
+
+.ci-wrap input[type=date]:focus::-webkit-datetime-edit,
+.ci-wrap input[type=date].active::-webkit-datetime-edit {
+    color: black !important;
+}
