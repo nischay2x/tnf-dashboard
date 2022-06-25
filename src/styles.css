@@ -36,12 +36,11 @@ main .col.bg-sec {
   padding-left: 1rem;
   transition: 0.2s ease;
   cursor: pointer;
-  padding-top: 0.4rem;
+  padding-top: 0.2rem;
   padding-bottom: 0.4rem;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   display: flex;
-  align-items: center;
   font-weight: 500;
   font-size: 1.1rem;
   column-gap: 0.8rem;
@@ -117,12 +116,7 @@ main .col.bg-sec {
   font-size: 0.9rem;
 }
 
-.small-inputs:nth-child(3n + 1) {
-  padding-left: 0 !important;
-}
-.small-inputs:nth-child(3n) {
-  padding-right: 0 !important;
-}
+
 .edit-profile-btn {
   border: 1px solid var(--main);
   color: var(--main);
@@ -133,6 +127,12 @@ main .col.bg-sec {
   color: #fff;
 }
 
+.p-rel{
+  position: relative;
+}
+.p-abs{
+  position: absolute;
+}
 .w-95{
   width: 95%;
 }
@@ -156,6 +156,12 @@ main .col.bg-sec {
 }
 .bg-sec {
   background-color: var(--sec);
+}
+
+.bi{
+  color: inherit;
+  padding: 0;
+  max-height: fit-content;
 }
 
 .MuiFormHelperText-root {

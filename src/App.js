@@ -7,14 +7,14 @@ import Resume from "./components/resume";
 import Services from "./components/services";
 
 const navList = [
-  { name: "home", icon: "fa fa-facebook" },
-  { name: "profile", icon: "fa fa-facebook" },
-  { name: "about", icon: "fa fa-facebook" },
-  { name: "resume", icon: "fa fa-facebook" },
-  { name: "services", icon: "fa fa-facebook" },
-  { name: "intrest", icon: "fa fa-facebook" },
-  { name: "testimonial", icon: "fa fa-facebook" },
-  { name: "portfolio", icon: "fa fa-facebook" }
+  { name: "home", icon: "bi bi-house-fill" },
+  { name: "profile", icon: "bi bi-person-fill" },
+  { name: "about", icon: "bi bi-card-heading" },
+  { name: "resume", icon: "bi bi-file-earmark-person-fill" },
+  { name: "services", icon: "bi bi-gear-fill" },
+  { name: "intrest", icon: "bi bi-heart-fill" },
+  { name: "testimonial", icon: "bi bi-funnel-fill" },
+  { name: "portfolio", icon: "bi bi-card-list" }
 ];
 
 export default function App() {
@@ -26,7 +26,7 @@ export default function App() {
 
   return (
     <main className="d-flex">
-      <div className="col-0 col-md-3 col-lg-3 col-xl-2 bg-main d-flex flex-column sidebar p-0">
+      <div className="col-1 col-md-3 col-lg-3 col-xl-2 bg-main d-flex flex-column sidebar p-0">
         <div className="d-flex nav-header">
           <span className="m-auto">Menu</span>
         </div>
@@ -38,7 +38,7 @@ export default function App() {
                 key={i}
                 onClick={() => onNavClick(i)}
               >
-                <i className={n.icon} /> {n.name}
+                <i className={n.icon} /> <span className="pt-1">{n.name}</span>
               </div>
             ))}
           </div>
