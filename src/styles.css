@@ -117,15 +117,25 @@ main .col.bg-sec {
 }
 
 
-.edit-profile-btn {
+.edit-btn {
   border: 1px solid var(--main);
   color: var(--main);
   background-color: #fff;
 }
-.edit-profile-btn:hover {
+.edit-btn:hover {
   background-color: var(--main);
   color: #fff;
 }
+.delete-btn {
+  border: 1px solid #E21313;
+  color: #E21313;
+  background-color: #fff;
+}
+.delete-btn:hover {
+  background-color: #E21313;
+  color: #fff;
+}
+
 
 .p-rel{
   position: relative;

@@ -121,7 +121,7 @@ const Resume = () => {
         </div>
       </div>
       <div className="d-flex pb-4">
-        <button className="btn m-auto px-4 edit-profile-btn">Edit</button>
+        <button className="btn m-auto px-4 edit-btn">Edit</button>
       </div>
     </div>
   );

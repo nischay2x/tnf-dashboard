@@ -22,3 +22,15 @@ export function Select ({ label, value, onChange, name, className, options }) {
         </div>
     )
 }
+
+export function Autofill ({ label, value, onChange, name, className, list }) {
+    return (
+        <div className={`ci-wrap ${className}`}>
+            <input type="text" list={`dl-${name}`} value={value} onChange={onChange} name={name} className={value ? 'active' : ''} />
+            <label>{label}</label>
+            <datalist id={`dl-${name}`}>
+                { list.map((l, i) => <option key={i} value={l} />) }
+            </datalist>
+        </div>
+    )
+}

@@ -41,7 +41,7 @@ const Services = () => {
                                     <TextField type="text" value={s.desc} label="Service Description" onChange={(e) => onServiceChange(e, i)} name="desc" />
                                 </div>
                                 <div className="col-2 py-2 d-flex">
-                                    <button className="btn btn-warning ml-auto"
+                                    <button className="btn btn-outline-danger ml-auto"
                                         onClick={() => {setServices(prev => prev.filter((_, idx) => idx !== i))}}
                                     >Delete</button>
                                 </div>
@@ -51,12 +51,12 @@ const Services = () => {
                 }
             </div>
             <div className="d-flex">
-                <button className="btn btn-primary" 
+                <button className="btn edit-btn" 
                     onClick={() => { setServices(prev => [...prev, emptyService]) }}
                 >Add Service</button>
             </div>
             <div className="d-flex pb-4">
-                <button className="btn m-auto px-4 edit-profile-btn">Edit</button>
+                <button className="btn m-auto px-4 edit-btn">Edit</button>
             </div>
         </div>
     );
