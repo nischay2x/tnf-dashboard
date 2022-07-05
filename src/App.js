@@ -6,6 +6,7 @@ import { useState } from "react";
 import Resume from "./components/resume";
 import Services from "./components/services";
 import Interest from "./components/interest";
+import Testimonial from "./components/testimonials";
 
 const navList = [
   { name: "home", icon: "bi bi-house-fill" },
@@ -13,7 +14,7 @@ const navList = [
   { name: "about", icon: "bi bi-card-heading" },
   { name: "resume", icon: "bi bi-file-earmark-person-fill" },
   { name: "services", icon: "bi bi-gear-fill" },
-  { name: "Interest", icon: "bi bi-heart-fill" },
+  { name: "interest", icon: "bi bi-heart-fill" },
   { name: "testimonial", icon: "bi bi-funnel-fill" },
   { name: "portfolio", icon: "bi bi-card-list" }
 ];
@@ -65,7 +66,8 @@ function Wrap ({ componentName }) {
     case 'profile': return <Profile/>;
     case 'resume': return <Resume/>;
     case 'services': return <Services/>;
-    case 'Interest': return <Interest/>
+    case 'interest': return <Interest/>;
+    case 'testimonial': return <Testimonial/>;
     default: return <></>
   }
 }

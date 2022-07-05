@@ -27,7 +27,18 @@ const Interest = () => {
     }, [selectedInterests])
 
     const deleteOne = (idx) => {
-        setSelectedInterests(prev => prev.filter((_, i) => i !== idx));
+        if(idx === 0) return;
+        let temp = [];
+        let tempMap = {};
+        selectedInterests.forEach((i, indx) => {
+            if(indx !== idx) {
+                temp.push(i);
+                tempMap[indx] = i;
+            } 
+        })
+        console.log(temp);
+        setSelectedInterests(temp);
+        setInterestMap(tempMap);
     }
 
     useEffect(() => {

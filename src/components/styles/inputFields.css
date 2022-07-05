@@ -12,7 +12,7 @@
     background-color: #ffffff;
 }
 
-.ci-wrap select > option {
+.ci-wrap select>option {
     padding: 0.5rem;
     border: none;
 }
@@ -32,13 +32,14 @@
 }
 
 .ci-wrap input:focus,
-.ci-wrap select:focus{
+.ci-wrap select:focus {
     box-shadow: 1px 1px 0px var(--main);
 }
-.ci-wrap input:focus + label, 
-.ci-wrap input.active + label,
-.ci-wrap select:focus + label,
-.ci-wrap select.active + label {
+
+.ci-wrap input:focus+label,
+.ci-wrap input.active+label,
+.ci-wrap select:focus+label,
+.ci-wrap select.active+label {
     transform: translateY(0);
     font-size: small;
     color: darkgreen;
@@ -51,4 +52,63 @@
 .ci-wrap input[type=date]:focus::-webkit-datetime-edit,
 .ci-wrap input[type=date].active::-webkit-datetime-edit {
     color: black !important;
+}
+
+#form-file-upload {
+    height: 16rem;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    overflow: hidden;
+    border: 0.5rem solid #ffffff;
+    border-radius: 1rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #ffffff;
+    position: relative;
+}
+
+#input-file-upload {
+    display: none;
+}
+
+#label-file-upload {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-width: 2px;
+    border-radius: 1rem;
+    border-style: dashed;
+    border-color: #cbd5e1;
+    background-color: #f8fafc;
+}
+
+#label-file-upload.drag-active {
+    background-color: #ffffff;
+}
+
+.upload-button {
+    cursor: pointer;
+    padding: 0.25rem;
+    font-size: 1rem;
+    border: none;
+    font-family: 'Oswald', sans-serif;
+    background-color: transparent;
+}
+
+.upload-button:hover {
+    text-decoration-line: underline;
+}
+
+#drag-file-element {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
 }
