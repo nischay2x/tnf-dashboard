@@ -7,6 +7,7 @@ import Resume from "./components/resume";
 import Services from "./components/services";
 import Interest from "./components/interest";
 import Testimonial from "./components/testimonials";
+import Portfolio from "./components/portfoilo";
 
 const navList = [
   { name: "home", icon: "bi bi-house-fill" },
@@ -68,6 +69,7 @@ function Wrap ({ componentName }) {
     case 'services': return <Services/>;
     case 'interest': return <Interest/>;
     case 'testimonial': return <Testimonial/>;
+    case 'portfolio': return <Portfolio/>;
     default: return <></>
   }
 }

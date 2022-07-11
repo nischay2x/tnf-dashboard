@@ -27,7 +27,7 @@ const Interest = () => {
     }, [selectedInterests])
 
     const deleteOne = (idx) => {
-        if(idx === 0) return;
+        if(selectedInterests.length === 0) return;
         let temp = [];
         let tempMap = {};
         selectedInterests.forEach((i, indx) => {
