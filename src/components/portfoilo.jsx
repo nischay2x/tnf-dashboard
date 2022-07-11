@@ -3,7 +3,7 @@ import { DragDropFile, TextField } from "./inputFields";
 
 const Portfolio = () => {
 
-    const [testimonials, setTestimonials] = useState([
+    const [portfolios, setPortfolios] = useState([
         { name: "", category: "", image: "" }
     ]);
 
@@ -13,32 +13,32 @@ const Portfolio = () => {
 
     const onInputChange = (e, i) => {
         setFocusedData(prev => ({...prev, [e.target.name]: e.target.value, index: i}))
-        let temp = testimonials;
+        let temp = portfolios;
         temp[i] = { ...temp[i], [e.target.name]: e.target.value };
-        setTestimonials(temp);
+        setPortfolios(temp);
     }
 
     // useEffect(() => {
-    //     console.log("tts--", testimonials);
+    //     console.log("tts--", portfolios);
     //     console.log("fds--", focusedData);
-    // }, [testimonials, focusedData])
+    // }, [portfolios, focusedData])
 
     useEffect(() => {
         if(focusedData.index >= 0){
-            setFocusedData(testimonials[focusedData.index] || {
+            setFocusedData(portfolios[focusedData.index] || {
                 name: "", category: "", image: "", index: ""
             })
         }
     }, [focusedData.index])
 
     const onAddMore = () => {
-        setTestimonials(prev => [...prev, { name: "", category: "", image: "" }])
+        setPortfolios(prev => [...prev, { name: "", category: "", image: "" }])
     }
 
     const deleteOne = (i) => {
-        if(i === 0) return;
-        let temp = testimonials.filter((_, idx) => i !== idx)
-        setTestimonials(temp)
+        if(!portfolios.length) return;
+        let temp = portfolios.filter((_, idx) => i !== idx)
+        setPortfolios(temp)
     }
 
     return (
@@ -49,7 +49,7 @@ const Portfolio = () => {
             <br />
             <div>
                 {
-                    testimonials.map((t, i) => (
+                    portfolios.map((t, i) => (
                         <div key={i} className="d-flex flex-wrap rg-1 px-0 py-2 p-rel my-4 border rounded">
                             <div className="col-12 py-2 col-md-6">
                                 <TextField name="name" value={focusedData.index === i? focusedData.name : t.name} onChange={(e) => { onInputChange(e, i) }} label="Portfolio Name" />
